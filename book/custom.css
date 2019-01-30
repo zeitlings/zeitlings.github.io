@@ -1,0 +1,140 @@
+html {
+  line-height: 150%;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 3px 20px;
+    color: var(--fg-quote);
+    font-size: 14px;
+    background-color: var(--quote-bg);
+    border-left: .5em solid var(--quote-border) !important;
+    border-top: .0em solid var(--quote-border) !important;
+    border-bottom: .0em solid var(--quote-border) !important;
+}
+
+blockquote::before {
+  display: inline-block;
+  content: "\f10d";
+  font-family: FontAwesome;
+  margin-left: 0px;
+  color: #e0e0e0;
+  padding: -10px;
+}
+
+a.header:target h1::before {
+  display: inline-block;
+  content: "\f0c1";
+  font-family: FontAwesome;
+  margin-left: -30px;
+  width: 30px;
+}
+a.header:target h2:before,
+a.header:target h3:before,
+a.header:target h4:before {
+    display: inline-block;
+    content: "\f0c1";
+    font-family: FontAwesome;
+    margin-left: -30px;
+    width: 30px;
+}
+
+
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+}
+
+
+// Using numbers instead of bullets for listing
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    border: 1px solid #ededed;
+    padding: 1.5em;
+    list-style: decimal;
+    display: inline-block;
+}
+
+
+.light {
+    --fg: #3d3d3d !important;
+    --fg-quote: #878787;
+    --quote-bg: #fcfcfc;
+    --quote-border: #f4f4f4;
+
+    --table-border-color: hsl(0, 0%, 95%);
+    --table-header-bg: #f4f4f4;
+    --table-alternate-bg: hsl(0, 0%, 97%);
+}
+
+
+.container {
+  display: flex;
+  }
+.left {
+  background: #f9f9f9;
+  flex-grow: 1;
+  height: 150px;
+  width: 50%;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding: 0 10px;
+  padding-left: 4px;
+  padding-top: 4px;
+}
+
+/*.middle {
+  background: #f4f4f4;
+  flex-grow: 0;
+  height: 150px;
+  width: 25%;
+  margin-right: 1em;
+  padding: 4px;
+} */
+
+.right {
+  background: #f9f9f9;
+  flex-grow: 1;
+  height: 150px;
+  width: 50%;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  padding-left: 4px;
+  padding-top: 4px;
+}
+
+.blindRight {
+  background: #fff;
+  flex-grow: 1;
+  height: 150px;
+  width: 50%;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  padding-left: 4px;
+  padding-top: 4px;
+}
+
+.container > div {
+  font-size: 1rem;
+  padding: .5em;
+  color: none;
+}
+
+#flexText {
+  padding: .8em;
+  padding-left: .8em;
+}
+
+@media screen only and (max-width: 785px) {
+  .left, .right .middle .blindRight {
+    width: 50%;
+    height: auto !important;
+
+  }
+
+/* without effect */
+hr { margin: 10px 0 10px 0; }

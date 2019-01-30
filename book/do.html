@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Contribute to PhilHub - PhilHub</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="philhub.html"><strong aria-hidden="true">1.</strong> PhilHub</a></li><li><a href="do.html" class="active"><strong aria-hidden="true">2.</strong> Contribute to PhilHub</a></li><li><a href="res.html"><strong aria-hidden="true">3.</strong> Public Resources</a></li><li><a href="tex.html"><strong aria-hidden="true">4.</strong> LaTeX for Philosophers</a></li><li><a href="guide.html"><strong aria-hidden="true">5.</strong> Academic Guidelines</a></li><li><a href="journals.html"><strong aria-hidden="true">6.</strong> List of Journals</a></li><li class="affix"><a href="imp.html">Legal Notice</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">PhilHub</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#contribute-to-philhub" id="contribute-to-philhub"><h1>Contribute to PhilHub</h1></a>
+<div id="markdown-toc" style="font-size: 14px">
+<p style="font-size:16px">Contents</p>
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<ul>
+<li><a href="#contribute-to-philhub">Contribute to PhilHub</a>
+<ul>
+<li><a href="#1-introduction">1. Introduction</a></li>
+<li><a href="#2-how-to-participate">2. How to participate</a>
+<ul>
+<li><a href="#21-hypothesis">2.1 Hypothes.is</a>
+<ul>
+<li><a href="#use-the-hsidebar-to-review-texts">Use the <em>h.sidebar</em> to review texts</a></li>
+</ul>
+</li>
+<li><a href="#22-github-pull-request">2.2 GitHub Pull-Request</a></li>
+<li><a href="#3-philhub-community">3. philHub Community</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+</div>
+<a class="header" href="#1-introduction" id="1-introduction"><h2>1. Introduction</h2></a>
+<p>The bibliographies listed on <strong>philHub</strong> are not exhaustive. It's not <a href="" data-toggle="tooltip" data-placement="top" title="that is yours and mine!">our</a> aim to offer a comprehensive archive for philosophical literature, but to encourage collective review of actively discussed philosophical works. The texts linked on this site where retrieved via generic google-searches. You may suggest texts that you find suitable for public participation. Do so either directly on the philHub repository page via <a href="#i--hypothesis">hypothes.is</a> or propose a project via the <a href="http://agora.philhub.co">philHub forums</a>; by using the forum your submission is next to guaranteed to catch attention.</p>
+<p><strong>PhilHub is free, open access and non profit <i class="fa fa-creative-commons fa-fw"></i>.</strong></p>
+<hr />
+<a class="header" href="#2-how-to-participate" id="2-how-to-participate"><h2>2. How to participate</h2></a>
+<p><strong>PhilHub thrives on your participation. What can you do?</strong></p>
+<ul>
+<li>Read philosophy and think about it. Share your thoughts directly within the shared pdf of a philosophical text, ask questions about certain concepts or paragraphs, answer questions of your peer reviewers (sic!) if you can. Discuss problems at hand.</li>
+<li>Engage in the <a href="http://agora.philhub.co">philHub Community</a>, discuss projects, philosophy and philHub itself.</li>
+<li>Use the hypothes.is sidebar or the forum to propose content that remains yet to be implemented.</li>
+<li>Use GitHub to directly revise a page on philHub and send it in with a pull request.</li>
+</ul>
+<a class="header" href="#21-hypothesis" id="21-hypothesis"><h3>2.1 Hypothes.is</h3></a>
+<p><img src="https://i.imgur.com/RYuEg3x.gif" alt="" /></p>
+<p>The <strong>hypothes.is sidebar</strong> is enabled by default. You should see it on the right side of your screen. Links to pdfs, regardless of whether on- or off-site, will be passed through the prefix <code>https://via.hypothes.is/</code>. This will enable the sidebar.</p>
+<a class="header" href="#use-the-hsidebar-to-review-texts" id="use-the-hsidebar-to-review-texts"><h4>Use the <em>h.sidebar</em> to review texts</h4></a>
+<p>You have to create an account with hypothes.is to annotate and comment <em>any</em> site on the internet. We'll use this function for explicitly reviewing philosophical texts, that is, to annotate, ask, discuss, give additional information, cross-reference and whatever else may present itself.</p>
+<p>You can get detailed information on the <a href="https://hypothes.is/">hypothes.is website <i class="fa fa-external-link fa-fw"></i></a>.</p>
+<hr />
+<a class="header" href="#22-github-pull-request" id="22-github-pull-request"><h3>2.2 GitHub Pull-Request</h3></a>
+<p>This function may be used to have direct influence on the content of this Repository. <em>PhilHub</em> is mirrored on GitHub. You may <em>pull</em> any available article and propose changes, write extensions, correct mistakes or use them for whatever else purpose you see fit. By <em>pushing</em> your changes back via GitHub, they may eventually be implemented into the site.</p>
+<p>To this end you should familiarize yourself with the <em>way of the Git</em>, if you want to participate. Plenty of documentation can be found online.</p>
+<ul>
+<li><a href="https://help.github.com/">help.github.com <i class="fa fa-external-link fa-fw"></i></a></li>
+<li><a href="#">2nd Source to consult <i class="fa fa-external-link fa-fw"></i></a></li>
+<li><a href="#">3rd Source to consult <i class="fa fa-external-link fa-fw"></i></a></li>
+</ul>
+<hr />
+<a class="header" href="#3-philhub-community" id="3-philhub-community"><h3>3. philHub Community</h3></a>
+<p><img src="http://agora.philhub.co/uploads/default/original/1X/2e41600875ddad26f77e4d6c822482d9a49f56f6.svg" alt="" />You can use the <a href="http://agora.philhub.co">philHub forums <i class="fa fa-link fa-fw"></i></a> to plan your review projects, find people to participate with or discuss philosophy outside of the hypothes.is discussion system.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="philhub.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="res.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="philhub.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="res.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="hypothesis.js"></script>
+        
+
+        
+
+    </body>
+</html>

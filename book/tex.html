@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>LaTeX for Philosophers - PhilHub</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="philhub.html"><strong aria-hidden="true">1.</strong> PhilHub</a></li><li><a href="do.html"><strong aria-hidden="true">2.</strong> Contribute to PhilHub</a></li><li><a href="res.html"><strong aria-hidden="true">3.</strong> Public Resources</a></li><li><a href="tex.html" class="active"><strong aria-hidden="true">4.</strong> LaTeX for Philosophers</a></li><li><a href="guide.html"><strong aria-hidden="true">5.</strong> Academic Guidelines</a></li><li><a href="journals.html"><strong aria-hidden="true">6.</strong> List of Journals</a></li><li class="affix"><a href="imp.html">Legal Notice</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">PhilHub</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#latex-for-philosophers" id="latex-for-philosophers"><h1>LaTeX for Philosophers</h1></a>
+<div id="markdown-toc" style="font-size: 14px">
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<p style="font-size:16px">Contents</p>
+<ul>
+<li><a href="#latex-for-philosophers">LaTeX for Philosophers</a>
+<ul>
+<li><a href="#1-latex-fundamentals">1. LaTeX fundamentals</a>
+<ul>
+<li><a href="#11-install-latex">1.1 Install LaTeX</a></li>
+<li><a href="#12-editors">1.2 Editors</a>
+<ul>
+<li><a href="#121-overleaf">1.2.1 Overleaf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#2-pandoc-and-markdown">2. Pandoc and Markdown</a></li>
+<li><a href="#3-latex-guides">3. LaTeX Guides</a>
+<ul>
+<li><a href="#31-latex-for-logicians">3.1 LaTex for Logicians</a></li>
+<li><a href="#32-prepare-your-thesis-with-latex">3.2 Prepare your Thesis with LaTeX</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- /TOC -->
+<p>It's best to acquaint yourself as early as possible with LaTeX, as it is the most reliable, most adjustable solution and simply most pleasing to the eyes way to write your papers or thesis. You can consider LaTeX the default standard of good practice. Nonetheless, journals still tend ask for word files these days. For an easy way to convert your file back, see what <em>Pandoc</em> can do for you.</p>
+<a class="header" href="#1-latex-fundamentals" id="1-latex-fundamentals"><h2>1. LaTeX fundamentals</h2></a>
+<a class="header" href="#11-install-latex" id="11-install-latex"><h3>1.1 Install LaTeX</h3></a>
+<blockquote>
+<p>LaTeX (/ˈlɑːtɛx/ LAH-tekh or /ˈleɪtɛx/ LAY-tekh; a shortening of Lamport TeX) is a document preparation system. When writing, the writer uses plain text as opposed to the formatted text found in WYSIWYG [...] The writer uses markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylise text throughout a document (such as bold and italics), and to add citations and cross-references.</p>
+<p>@ <a href="https://en.wikipedia.org/wiki/LaTeX">Wikipedia</a></p>
+</blockquote>
+<p>For <code>*.pdfs</code> to be compiled from your <code>*.tex</code> files it relies on several dependencies to be installed on your computer. They are provided by the <a href="http://www.tug.org/interest.html#free">Tex User Group (TUG)</a> for free. For example, Mac users can install <a href="https://www.tug.org/mactex/">MacTeX</a>. Windows and Linux users can install the dependencies with <a href="https://miktex.org/download">MiKTeX</a> or use <a href="https://www.tug.org/texlive/">TeX Live</a>. Check the TUG for alternatives. On <a href="https://www.latex-project.org/">https://www.latex-project.org/</a> you can find general information.</p>
+<a class="header" href="#12-editors" id="12-editors"><h3>1.2 Editors</h3></a>
+<p>You can find a list of free editors to write in on <a href="http://www.tug.org/interest.html#packages">www.tug.org</a>. Such include GitHubs open source editor <a href="https://atom.io/">Atom</a> or <a href="https://texstudio.org/">TeX Studio</a>. A list of commercial applications can be found <a href="http://www.tug.org/interest.html#vendors">here</a>. A rather user friendly and reasonably priced example is <a href="https://texpad.com/">Texpad</a> for mac. They also provide an iOS option for mobile editing. (I have no affiliation to them.)</p>
+<a class="header" href="#121-overleaf" id="121-overleaf"><h4>1.2.1 Overleaf</h4></a>
+<p>Overleaf deserves a special mention. It is an online, in-browser LaTeX-editor that makes your project accessible from anywhere, given that there is a wifi connection. They offer a free plan that should cover most of your needs. You can share your files with people to collaborate on your project directly in the browser window. However, it doesn't work well with mobile devices as of yet.
+<a href="https://www.overleaf.com?r=34b37c99&amp;rm=d&amp;rs=b">www.overleaf.com</a></p>
+<a class="header" href="#2-pandoc-and-markdown" id="2-pandoc-and-markdown"><h2>2. Pandoc and Markdown</h2></a>
+<p>Sometimes you might want to write in Markdown and later integrate your output into your LaTeX file, e.g. when you're on the road. <a href="https://pandoc.org/">Pandoc</a> lets you convert different kinds of formatting into another. To use its full potential, this requires some fiddling with the command line. For a quick and simple way to specifically convert Markdown into LaTeX or vice versa you could try my <a href="https://github.com/zeitlings/alfred-latex-md">Alfred Workflow</a> to do just that.</p>
+<p>If you're still looking for a Markdown editor I'd recommend the charming cross platform, open source editor <a href="https://typora.io/"><strong>Typora</strong></a>. There are a lot of them out there and ultimately really any editor will do. <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Here's a Markdown Cheatsheet</a>.</p>
+<p><strong>Links:</strong><br />
+<a href="https://pandoc.org/">https://pandoc.org/</a> (Markup conversion)<br />
+<a href="https://typora.io/">https://typora.io/</a> (Markdown editor)<br />
+<a href="https://github.com/zeitlings/alfred-latex-md">https://github.com/zeitlings/alfred-latex-md</a> (LaTeX ⟷ Markdown Alfred Workflow)<br />
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a> (Markdown Cheatsheet)</p>
+<a class="header" href="#3-latex-guides" id="3-latex-guides"><h2>3. LaTeX Guides</h2></a>
+<a class="header" href="#31-latex-for-logicians" id="31-latex-for-logicians"><h3>3.1 LaTex for Logicians</h3></a>
+<p><a href="http://www.logicmatters.net/latex-for-logicians/">http://www.logicmatters.net/latex-for-logicians/</a></p>
+<blockquote>
+<p>These pages give a brief guide to resources of interest to logicians, philosophers and others using LaTeX to produce papers or presentations, teaching materials, theses or books, and perhaps wanting to include logical matter such as natural deduction proofs.</p>
+</blockquote>
+<a class="header" href="#32-prepare-your-thesis-with-latex" id="32-prepare-your-thesis-with-latex"><h3>3.2 Prepare your Thesis with LaTeX</h3></a>
+<p><a href="http://www.koksvik.net/latex.php">http://www.koksvik.net/latex.php</a></p>
+<blockquote>
+<p>This page provides instructions for how to prepare your thesis with LaTeX. It also provides a number of template files which can be used to produce a thesis with relative ease. The page was last updated on 24 September 2012.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="res.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="res.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="hypothesis.js"></script>
+        
+
+        
+
+    </body>
+</html>

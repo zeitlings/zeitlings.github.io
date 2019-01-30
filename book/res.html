@@ -1,0 +1,627 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Public Resources - PhilHub</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="custom.css">
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="philhub.html"><strong aria-hidden="true">1.</strong> PhilHub</a></li><li><a href="do.html"><strong aria-hidden="true">2.</strong> Contribute to PhilHub</a></li><li><a href="res.html" class="active"><strong aria-hidden="true">3.</strong> Public Resources</a></li><li><a href="tex.html"><strong aria-hidden="true">4.</strong> LaTeX for Philosophers</a></li><li><a href="guide.html"><strong aria-hidden="true">5.</strong> Academic Guidelines</a></li><li><a href="journals.html"><strong aria-hidden="true">6.</strong> List of Journals</a></li><li class="affix"><a href="imp.html">Legal Notice</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">PhilHub</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#public-resources" id="public-resources"><h1>Public Resources</h1></a>
+<div id="markdown-toc" style="font-size: 14px">
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<p style="font-size:16px">Contents</p>
+<ul>
+<li><a href="#public-resources">Public Resources</a>
+<ul>
+<li><a href="#1-encyclopediae-and-lexica">1. Encyclopediae and Lexica</a>
+<ul>
+<li><a href="#11-stanford-encyclopedia-of-philosophy-">1.1 Stanford Encyclopedia of Philosophy ✮</a></li>
+<li><a href="#12-internet-encyclopedia-of-philosophy">1.2 Internet Encyclopedia of Philosophy</a></li>
+<li><a href="#13-routledge-encylopedia-of-philosophy">1.3 Routledge Encylopedia of Philosophy</a></li>
+<li><a href="#14-encyclopedia-britannica">1.4 Encyclopedia Britannica</a></li>
+<li><a href="#15-wikipedia-philosophy">1.5 Wikipedia - Philosophy</a></li>
+<li><a href="#16-a-dictionary-of-philosophical-terms-and-names">1.6 A Dictionary of Philosophical Terms and Names</a></li>
+<li><a href="#17-dictionary-of-philosophy-of-mind">1.7 Dictionary of Philosophy of Mind</a></li>
+<li><a href="#18-dictionary-of-cognitive-science">1.8 Dictionary of Cognitive Science</a></li>
+<li><a href="#19-meta-encyclopedia-of-philosophy">1.9 Meta-Encyclopedia of Philosophy</a></li>
+</ul>
+</li>
+<li><a href="#2-online-archives-books-journals-papers-reviews">2. Online Archives: Books, Journals, Papers, Reviews</a>
+<ul>
+<li><a href="#21-project-gutenberg">2.1 Project Gutenberg</a></li>
+<li><a href="#22-jstor">2.2 jstor</a></li>
+<li><a href="#23-philpapers-personal-pages">2.3 PhilPapers : Personal Pages</a></li>
+<li><a href="#24-notre-dame-philospohical-reviews-an-electronic-journal">2.4 Notre Dame Philospohical Reviews • An Electronic Journal</a></li>
+<li><a href="#25-the-open-commons-of-phenomenology-">2.5 The Open Commons of Phenomenology ✮</a></li>
+<li><a href="#26-ssrn-philosophy-research-network">2.6 SSRN - Philosophy Research Network</a></li>
+<li><a href="#27-philosophy-documentation-center">2.7 Philosophy Documentation Center</a></li>
+<li><a href="#28-mit-classics">2.8 MIT Classics</a></li>
+<li><a href="#29-zenodoorg">2.9 Zenodo.org</a></li>
+<li><a href="#210-humanities-commons">2.10 Humanities Commons</a></li>
+<li><a href="#211-university-online-archives">2.11 University Online Archives</a>
+<ul>
+<li><a href="#2111-iowa-research-online">2.11.1 Iowa Research Online</a></li>
+<li><a href="#2112-university-of-warwick-publications-service-wrap">2.11.2 University of Warwick Publications service &amp; WRAP</a></li>
+<li><a href="#2113-durham-research-online">2.11.3 Durham Research Online</a></li>
+<li><a href="#2114-universitys-online-archives">2.11.4 <code>university's online archives</code></a></li>
+<li><a href="#2115-oxford-academic-">2.11.5 Oxford Academic ✭</a></li>
+</ul>
+</li>
+<li><a href="#212-the-internet-archive">2.12 The Internet Archive</a></li>
+<li><a href="#213-the-grey-area">2.13 The grey area</a>
+<ul>
+<li><a href="#2131-library-genesis">2.13.1 Library Genesis</a></li>
+<li><a href="#2132-sci-hub">2.13.2 Sci-Hub</a></li>
+</ul>
+</li>
+<li><a href="#214-meta-search-engine-for-philosophy-papers-databases">2.14 Meta search engine for philosophy papers databases</a></li>
+</ul>
+</li>
+<li><a href="#3-research-sites-social-networks">3. Research Sites - Social Networks</a>
+<ul>
+<li><a href="#31-research-gate">3.1 Research Gate</a></li>
+<li><a href="#32-acadmeiaedu-">3.2 Acadmeia.edu ✮</a></li>
+</ul>
+</li>
+<li><a href="#4-bibliographies-for-research">4. Bibliographies for Research</a>
+<ul>
+<li><a href="#41-philpapers-online-research-in-philosophy-">4.1 PhilPapers: Online Research in Philosophy ✮</a></li>
+<li><a href="#42-the-philosophers-index-">4.2 The Philosopher's Index ✮</a></li>
+<li><a href="#43-worldcat">4.3 WorldCat</a></li>
+<li><a href="#44-google-scholar">4.4 Google Scholar</a></li>
+<li><a href="#45-google-books">4.5 Google Books</a></li>
+</ul>
+</li>
+<li><a href="#5-philosophical-communities">5. Philosophical Communities</a>
+<ul>
+<li><a href="#51-philhub-community">5.1 philHub Community</a></li>
+<li><a href="#52-stackexchange">5.2 stackexchange</a></li>
+<li><a href="#53-reddit-philosophy">5.3 Reddit Philosophy</a></li>
+<li><a href="#54-online-philosophy-club">5.4 Online Philosophy Club</a></li>
+<li><a href="#55-the-philosophy-forum">5.5 The Philosophy Forum</a></li>
+<li><a href="#56-philosophy-forums">5.6 Philosophy Forums</a></li>
+<li><a href="#57-philosophy-now">5.7 Philosophy Now</a></li>
+</ul>
+</li>
+<li><a href="#6-philosophy-blogs">6. Philosophy Blogs</a>
+<ul>
+<li><a href="#61-philosophers-cocoon">6.1 Philosophers Cocoon</a></li>
+</ul>
+</li>
+<li><a href="#7-media">7. Media</a>
+<ul>
+<li><a href="#71-philsophy-bites">7.1 Philsophy Bites</a></li>
+<li><a href="#72-the-philosophers-zone">7.2 The Philosopher's Zone</a></li>
+<li><a href="#73-open-culture">7.3 Open Culture</a></li>
+<li><a href="#74-courseworld">7.4 Courseworld</a></li>
+<li><a href="#75-youtube-channels">7.5 Youtube Channels</a>
+<ul>
+<li><a href="#751-mark-thorsby-philosophical-techn">7.5.1 Mark Thorsby - Philosophical Techné</a></li>
+<li><a href="#752-carneades">7.5.2 Carneades</a></li>
+<li><a href="#753-gregory-b-sadler">7.5.3 Gregory B. Sadler</a></li>
+<li><a href="#754-wireless-philosophy">7.5.4 Wireless Philosophy</a></li>
+<li><a href="#755-philosophy-at-the-university-of-edinburgh">7.5.5 Philosophy at the University of Edinburgh</a></li>
+<li><a href="#756-philosophical-overdose">7.5.6 Philosophical Overdose</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#8-academia">8. Academia</a>
+<ul>
+<li><a href="#81-philevents">8.1 PhilEvents</a></li>
+<li><a href="#82-philos-l">8.2 PHILOS-L</a></li>
+<li><a href="#83-philjobs">8.3 PhilJobs</a></li>
+<li><a href="#84-conference-alerts">8.4 Conference Alerts</a></li>
+<li><a href="#85-polylog-interphil-mailing-list">8.5 Polylog | InterPhil Mailing List</a></li>
+</ul>
+</li>
+<li><a href="#9-additional-helpful-resources">9. Additional Helpful Resources</a>
+<ul>
+<li><a href="#91-squashed-philosophers">9.1 Squashed Philosophers</a></li>
+<li><a href="#92-the-philosophical-gourmet-report">9.2 The Philosophical Gourmet Report</a></li>
+<li><a href="#93-mactutor-history-of-mathematics-archive">9.3 MacTutor History of Mathematics archive</a></li>
+<li><a href="#94-fallacy-files">9.4 Fallacy Files</a></li>
+<li><a href="#95-stephens-guide-to-logical-fallacies">9.5 Stephen's Guide to Logical Fallacies</a></li>
+<li><a href="#96-episteme-links">9.6 Episteme Links</a></li>
+<li><a href="#97-resource-list-of-the-university-of-regensburg-de">9.7 Resource list of the University of Regensburg (DE)</a></li>
+</ul>
+</li>
+<li><a href="#10-philosophy-fun">10. Philosophy Fun</a>
+<ul>
+<li><a href="#101-existential-comics">10.1 Existential Comics</a></li>
+<li><a href="#102-philosophy-bro">10.2 Philosophy Bro</a></li>
+<li><a href="#103-the-philosophical-lexicon">10.3 The Philosophical Lexicon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+</div>
+<a class="header" href="#1-encyclopediae-and-lexica" id="1-encyclopediae-and-lexica"><h2>1. Encyclopediae and Lexica</h2></a>
+<a class="header" href="#11-stanford-encyclopedia-of-philosophy-" id="11-stanford-encyclopedia-of-philosophy-"><h3>1.1 Stanford Encyclopedia of Philosophy ✮</h3></a>
+<p><a href="https://plato.stanford.edu/">Stanford Encyclopedia of Philosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+High quality, open access and citable encyclopedia, covering the whole spectrum of academic philosophy.</p>
+<a class="header" href="#12-internet-encyclopedia-of-philosophy" id="12-internet-encyclopedia-of-philosophy"><h3>1.2 Internet Encyclopedia of Philosophy</h3></a>
+<p><a href="http://www.iep.utm.edu/">Internet Encyclopedia of Philosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+Open access Encyclopedia provided by the University of Tennessee, covering the whole spectrum of academic philosophy.</p>
+<a class="header" href="#13-routledge-encylopedia-of-philosophy" id="13-routledge-encylopedia-of-philosophy"><h3>1.3 Routledge Encylopedia of Philosophy</h3></a>
+<p><a href="https://www.rep.routledge.com/">Routledge Encyclopedia of Philosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+Unfortunately <strong>not</strong> openly accessible. However, previews may be seen and some articles are provided for free. You can check whether your university has a subscription granting you access by logging in via <i class="fa fa-institution fa-fw"></i> Institutional Login</p>
+<a class="header" href="#14-encyclopedia-britannica" id="14-encyclopedia-britannica"><h3>1.4 Encyclopedia Britannica</h3></a>
+<p>https://www.britannica.com/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Well, it's the EB. A holistic Encyclopedia also covering content relevant to philosophy.</p>
+<a class="header" href="#15-wikipedia---philosophy" id="15-wikipedia---philosophy"><h3>1.5 Wikipedia - Philosophy</h3></a>
+<p><a href="https://en.wikipedia.org/wiki/Category:Philosophy">Wikipedia's philosophy category page <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+Yes. Even if it's often regarded as uncitable and unreliable, Wikipedia still offers a great overview and entry point to almost all areas of interest.</p>
+<a class="header" href="#16-a-dictionary-of-philosophical-terms-and-names" id="16-a-dictionary-of-philosophical-terms-and-names"><h3>1.6 A Dictionary of Philosophical Terms and Names</h3></a>
+<p>http://www.philosophypages.com/dy/index.htm <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>This is a concise guide to technical terms and personal names often encountered in the study of philosophy. What you will find here naturally reflects my own philosophical interests and convictions, but everything is meant to be clear, accurate, and fair, a reliable source of information on Western philosophy for a broad audience. The curriculum vitae elsewhere on this site describes my experience in academic life.</p>
+</blockquote>
+<a class="header" href="#17-dictionary-of-philosophy-of-mind" id="17-dictionary-of-philosophy-of-mind"><h3>1.7 Dictionary of Philosophy of Mind</h3></a>
+<p><a href="https://sites.google.com/site/minddict/">Dictionary of Philosophy of Mind <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<blockquote>
+<p>The Dictionary of Philosophy of Mind is intended to serve as a reference work suitable for use by professionals and students interested in the philosophy of mind. It is intended to reflect current approaches in the field.</p>
+</blockquote>
+<a class="header" href="#18-dictionary-of-cognitive-science" id="18-dictionary-of-cognitive-science"><h3>1.8 Dictionary of Cognitive Science</h3></a>
+<p><a href="http://www.bcp.psych.ualberta.ca/%7Emike/Pearl_Street/Dictionary/">Dictionary of Cognitive Science <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<a class="header" href="#19-meta-encyclopedia-of-philosophy" id="19-meta-encyclopedia-of-philosophy"><h3>1.9 Meta-Encyclopedia of Philosophy</h3></a>
+<blockquote>
+<p>Compare topics in the most important Encyclopedias and Dictionaries of Philosophy on the Internet.</p>
+</blockquote>
+<p>http://www.ditext.com/encyc/frame.html <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<hr />
+<a class="header" href="#2-online-archives-books-journals-papers-reviews" id="2-online-archives-books-journals-papers-reviews"><h2>2. Online Archives: Books, Journals, Papers, Reviews</h2></a>
+<a class="header" href="#21-project-gutenberg" id="21-project-gutenberg"><h3>2.1 Project Gutenberg</h3></a>
+<p>[Gutenberg.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font>](http://www.gutenberg.org/wiki/Philosophy_(Bookshelf))
+Offers over 50000 free eBooks (in various languages) that can be downloaded to users' PC or portable device.</p>
+<blockquote>
+<p>We carry high quality ebooks: Most Project Gutenberg ebooks were previously published by bona fide publishers. We digitized and diligently proofread them with the help of thousands of volunteers.</p>
+</blockquote>
+<a class="header" href="#22-jstor" id="22-jstor"><h3>2.2 jstor</h3></a>
+<p><a href="https://jstor.org/">jstor.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+JSTOR is a digital library of academic journals, books, and primary sources. Requires authentication via university login (shibboleth).</p>
+<a class="header" href="#23-philpapers--personal-pages" id="23-philpapers--personal-pages"><h3>2.3 PhilPapers : Personal Pages</h3></a>
+<p><a href="https://philpapers.org/pages/list.html">philpapers.org: Personal Pages <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a>
+A collection of academic philosophers personal pages. On these the authors themselves often provide papers they've published. Optional filtering by area of interest. Sadly, many of the listed links are not up to date.<br />
+Or alternatively <a href="http://consc.net/people.html"><strong>consc.net/people</strong>: a compilation by David Chalmers <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a> (static, outdated)</p>
+<a class="header" href="#24-notre-dame-philospohical-reviews--an-electronic-journal" id="24-notre-dame-philospohical-reviews--an-electronic-journal"><h3>2.4 Notre Dame Philospohical Reviews • An Electronic Journal</h3></a>
+<blockquote>
+<p>Notre Dame Philosophical Reviews began publication in January 2002. It is entirely devoted to publishing substantive, high-quality book reviews (normal length: 1500-2500 words). Reviews continually appear, usually five to twelve in the course of each week.</p>
+</blockquote>
+<blockquote>
+<p>Our goal is to review a good majority of the scholarly philosophy books issued each year and to have the review appear within six to twelve months of a book's publication. Reviews are commissioned and vetted by a distinguished international Editorial Board. We do not accept unsolicited reviews or proposals to review. The journal is published only electronically (available free, through e-mail subscription, RSS feed, and on this website).</p>
+</blockquote>
+<p><a href="http://ndpr.nd.edu/recent-reviews/" title="Notre Dame Philosophical Reviews">Notre Dame Philosophical Reviews <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<a class="header" href="#25-the-open-commons-of-phenomenology-" id="25-the-open-commons-of-phenomenology-"><h3>2.5 The Open Commons of Phenomenology ✮</h3></a>
+<p><a href="http://ophen.org/">Open commons of Phenomenology: Ophen.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<blockquote>
+<p>The Open Commons repository will contain the full corpus of phenomenology by 2020. In June 2017, it numbered 33.000 entries (about 15% of the total).</p>
+</blockquote>
+<p>Offers open access to texts on phenomenology, gives a catalogue of upcoming events related to the subject, lists call or papers, creates a solid bibliography concerning phenomenology.</p>
+<a class="header" href="#26-ssrn---philosophy-research-network" id="26-ssrn---philosophy-research-network"><h3>2.6 SSRN - Philosophy Research Network</h3></a>
+<p><a href="https://www.ssrn.com/en/index.cfm/prn/prn-ejournals/">www.ssrn.com <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+A list of eJournals organized by areas of interest with a solid collection of contributions. Try the search function.</p>
+<a class="header" href="#27-philosophy-documentation-center" id="27-philosophy-documentation-center"><h3>2.7 Philosophy Documentation Center</h3></a>
+<p><a href="https://www.pdcnet.org/pdc/bvdb.nsf/journalbrowser?openform&amp;sort=category">www.pdcnet.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+A collection of electronically (re)published journals. Subscription based. Even if you're not eligible for access, PDC is still a great source for research.</p>
+<a class="header" href="#28-mit-classics" id="28-mit-classics"><h3>2.8 MIT Classics</h3></a>
+<p><a href="http://classics.mit.edu/Browse/index.html">MIT Classics <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+Works by ancient philosophers (greek and latin), curated by the Massachusetts Institute of Technology.<br />
+The repository covers more than the usual suspects such as Plato, Aristotle or Cicero.</p>
+<a class="header" href="#29-zenodoorg" id="29-zenodoorg"><h3>2.9 Zenodo.org</h3></a>
+<p>https://zenodo.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+EU funded. Integrates with GitHub.</p>
+<a class="header" href="#210-humanities-commons" id="210-humanities-commons"><h3>2.10 Humanities Commons</h3></a>
+<p>https://hcommons.org/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>Welcome to Humanities Commons, the network for people working in the humanities. Discover the latest open-access scholarship and teaching materials, make interdisciplinary connections, build a WordPress Web site, and increase the impact of your work by sharing it in the repository.</p>
+</blockquote>
+<a class="header" href="#211-university-online-archives" id="211-university-online-archives"><h3>2.11 University Online Archives</h3></a>
+<a class="header" href="#2111-iowa-research-online" id="2111-iowa-research-online"><h4>2.11.1 Iowa Research Online</h4></a>
+<blockquote>
+<p>Iowa Research Online (ISSN 2476-1680 (online)) preserves and provides access to the research and creative scholarship created by the University of Iowa’s faculty, students, and staff. The research papers, theses, dissertations, books, conference presentations, journals, and multimedia here represent Iowa’s rich intellectual and cultural community.</p>
+</blockquote>
+<p>http://ir.uiowa.edu/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#2112-university-of-warwick-publications-service--wrap" id="2112-university-of-warwick-publications-service--wrap"><h4>2.11.2 University of Warwick Publications service &amp; WRAP</h4></a>
+<blockquote>
+<p>he Warwick Research Archive Portal (WRAP) is the home of the University's full text, open access research content and contains, journal articles, Warwick doctoral dissertations, book chapters, conference papers, working papers and more. For the complete outputs from Warwick researchers please see the University of Warwick Publications service from the tab above.</p>
+</blockquote>
+<p>http://wrap.warwick.ac.uk/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#2113-durham-research-online" id="2113-durham-research-online"><h4>2.11.3 Durham Research Online</h4></a>
+<blockquote>
+<p>DRO contains details of journal articles, conference and working papers, book chapters and reports written by Durham University researchers. The full-text of many items is available, and can be used free of charge. Use is for non-commercial, personal study except where licencing statements indicate otherwise. The DRO Deposit Guide describes the simple deposit process.</p>
+</blockquote>
+<p>http://dro.dur.ac.uk/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#2114-universitys-online-archives" id="2114-universitys-online-archives"><h4>2.11.4 <code>university's online archives</code></h4></a>
+<p>(?) usf. uni Freiburg, Berlin, MU</p>
+<a class="header" href="#2115-oxford-academic-" id="2115-oxford-academic-"><h4>2.11.5 Oxford Academic ✭</h4></a>
+<p>https://academic.oup.com/journals/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<p>A collection of journal entries. Try the search function for your area of interest. Access may be provided by your university, alternatively Oxford Academic serves as a starting point for your projects bibliography. Optionally, take a look at sub-section <a href="https://www.philhub.co/resources/open-resources.html#272-sci-hub">2.7.2 <i class="fa fa-link fa-fw"></i></a>.</p>
+<a class="header" href="#212-the-internet-archive" id="212-the-internet-archive"><h3>2.12 The Internet Archive</h3></a>
+<p>Vast archive that also includes philosophical texts.</p>
+<a class="header" href="#213-the-grey-area" id="213-the-grey-area"><h3>2.13 The grey area</h3></a>
+<a class="header" href="#2131-library-genesis" id="2131-library-genesis"><h4>2.13.1 Library Genesis</h4></a>
+<blockquote>
+<p>Library Genesis or LibGen is a search engine for articles and books on various topics[1], which allows free access to otherwise paywalled content. Among others it carries PDFs of content from Elsevier's ScienceDirect web-portal.</p>
+</blockquote>
+<p>@ Wikipedia, February 22nd 2017
+https://en.wikipedia.org/wiki/Library_Genesis <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#2132-sci-hub" id="2132-sci-hub"><h4>2.13.2 Sci-Hub</h4></a>
+<blockquote>
+<p>Sci-Hub is an online search engine with over 58,000,000 academic papers and articles available for direct download, bypassing publisher paywalls. New papers are uploaded daily when accessed through educational institution proxies, and papers that have been accessed through Sci-Hub are stored in the LibGen repository.</p>
+</blockquote>
+<p>@ Wikipedia, February 22nd 2017
+https://en.wikipedia.org/wiki/Sci-Hub <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#214-meta-search-engine-for-philosophy-papers-databases" id="214-meta-search-engine-for-philosophy-papers-databases"><h3>2.14 Meta search engine for philosophy papers databases</h3></a>
+<p>There is none as so far, is there? There should be one.</p>
+<hr />
+<a class="header" href="#3-research-sites---social-networks" id="3-research-sites---social-networks"><h2>3. Research Sites - Social Networks</h2></a>
+<p>These are websites actively attended to by contemporary philosophers. Papers are made accessible here, frequently even before print publication.</p>
+<a class="header" href="#31-research-gate" id="31-research-gate"><h3>3.1 Research Gate</h3></a>
+<p>https://www.researchgate.net/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>Discover scientific knowledge, and make your research visible.</p>
+</blockquote>
+<p>And while you're at it, discover the visible research of your dearest collegues.</p>
+<a class="header" href="#32-acadmeiaedu-" id="32-acadmeiaedu-"><h3>3.2 Acadmeia.edu ✮</h3></a>
+<p>https://academia.edu <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Criticism sparked, for academia.edu is not a educational website for which the top-level domain .edu nowadays is reserved. In 2001 these regulations have been established. Academia.edu was registered before that and is a for-profit organization. Concerns were raised about how the site will handle their users content since monetization is a factor. However, as of now it is huge network of active, contemporary philosophers (and other scientists) keeping their readers up-to-date with their most recent publications.</p>
+<hr />
+<a class="header" href="#4-bibliographies-for-research" id="4-bibliographies-for-research"><h2>4. Bibliographies for Research</h2></a>
+<a class="header" href="#41-philpapers-online-research-in-philosophy-" id="41-philpapers-online-research-in-philosophy-"><h3>4.1 PhilPapers: Online Research in Philosophy ✮</h3></a>
+<p><a href="https://philpapers.org/">philpapers.org</a> <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+A citation index and open access archive of Philosophy containing thousands of bibliographies.</p>
+<a class="header" href="#42-the-philosophers-index-" id="42-the-philosophers-index-"><h3>4.2 The Philosopher's Index ✮</h3></a>
+<p>https://philindex.org/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>The Most Authoritative Online Bibliography in Philosophy.</p>
+</blockquote>
+<blockquote>
+<p>This premier bibliographic database is designed to help researchers easily find publications of interest in the field of philosophy.
+Serving philosophers worldwide, it contains over 650,000 records from publications that date back to 1902 and originate from 139 countries in 37 languages.</p>
+</blockquote>
+<p>To be accessible <em>The Philosophers Index</em> requires access via <strong>your universitiy's library</strong> wifi or a tunneled connection to your university via VPN. Check your university's (library) website for information and availability. <strong>The search is usually conducted by <a href="https://www.ebsco.com/products/research-databases/the-philosophers-index">EBSCO</a>, <a href="http://www.proquest.com/products-services/philosopher-set-c.html">ProQuest</a> or <a href="http://www.ovid.com/site/catalog/databases/155.jsp">Ovid</a></strong>. You may be able to connect directly through ProQuest's institutional login and if not, access should be possible directly through your university's library search. Unfortunately, there's no stand-alone option to access the database known to me.</p>
+<p><strong><em>The Philsopher's Index</em> also offers a growing number of papers directly from their database!</strong></p>
+<a class="header" href="#43-worldcat" id="43-worldcat"><h3>4.3 WorldCat</h3></a>
+<p>https://www.worldcat.org/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>WorldCat is the world's largest network of library content and services. WorldCat libraries are dedicated to providing access to their resources on the Web, where most people start their search for information.</p>
+</blockquote>
+<a class="header" href="#44-google-scholar" id="44-google-scholar"><h3>4.4 Google Scholar</h3></a>
+<p>https://scholar.google.de/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>Google Scholar provides a simple way to broadly search for scholarly literature. From one place, you can search across many disciplines and sources: articles, theses, books, abstracts and court opinions, from academic publishers, professional societies, online repositories, universities and other web sites. Google Scholar helps you find relevant work across the world of scholarly research.</p>
+</blockquote>
+<a class="header" href="#45-google-books" id="45-google-books"><h3>4.5 Google Books</h3></a>
+<p>https://books.google.com/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>Search the world's most comprehensive index of full-text books.</p>
+</blockquote>
+<hr />
+<a class="header" href="#5-philosophical-communities" id="5-philosophical-communities"><h2>5. Philosophical Communities</h2></a>
+<a class="header" href="#51-philhub-community" id="51-philhub-community"><h3>5.1 philHub Community</h3></a>
+<p><img src="http://agora.philhub.co/uploads/default/original/1X/2e41600875ddad26f77e4d6c822482d9a49f56f6.svg" width="100"><a href="http://agora.philhub.co">agora.philhub.co</a> <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Join the philHub Community for planning review projects, finding fellow reviewers, asking questions, discussing about the <strong>philHub project</strong>, for exchange in general.
+<strong>Currently inactive and for the coming version on an invite only basis.</strong></p>
+<a class="header" href="#52-stackexchange" id="52-stackexchange"><h3>5.2 stackexchange</h3></a>
+<p><a href="http://philosophy.stackexchange.com/">philosophy.stackexchange.com <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+Philosophy Stack Exchange is a <strong>question and answer site</strong> for those interested in the study of the fundamental nature of knowledge, reality, and existence.</p>
+<a class="header" href="#53-reddit-philosophy" id="53-reddit-philosophy"><h3>5.3 Reddit Philosophy</h3></a>
+<ul>
+<li><a href="https://www.reddit.com/r/philosophy/">r/philosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></li>
+<li><a href="https://www.reddit.com/r/askphilosophy/">r/askphilosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></li>
+<li><a href="https://www.reddit.com/r/AcademicPhilosophy/">r/AcademicPhilosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></li>
+</ul>
+<p>You maybe don't want to overlook the vast reddit community. While <code>r/philosophy</code> seems to aim at a non-specialized audience, <code>r/askphilosophy</code> seems to respond with well-founded answers on occasion. Try <code>r/AcademicPhilosophy</code>for an academic focus.</p>
+<a class="header" href="#54-online-philosophy-club" id="54-online-philosophy-club"><h3>5.4 Online Philosophy Club</h3></a>
+<p><a href="https://onlinephilosophyclub.com/forums/">onlinephilosophyclub.com/forums <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a>
+An extensive and active english-speaking community.</p>
+<a class="header" href="#55-the-philosophy-forum" id="55-the-philosophy-forum"><h3>5.5 The Philosophy Forum</h3></a>
+<p><a href="http://thephilosophyforum.com/">thephilosophyforum.com <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+An active and uncluttered english-speaking community.</p>
+<!--
+###  5.6 Philosophy Forums
+[forums.philosophyforums.com <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font>](http://forums.philosophyforums.com/)
+A fairly large english-speaking community.
+<a class="header" href="#57-philosophy-now" id="57-philosophy-now"><h3>5.7 Philosophy Now</h3></a>
+<p><a href="http://forum.philosophynow.org/">forum.philosophynow.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a>
+Another fairly large english-speaking community.
+--&gt;</p>
+<hr />
+<a class="header" href="#6-philosophy-blogs" id="6-philosophy-blogs"><h2>6. Philosophy Blogs</h2></a>
+<a class="header" href="#61-philosophers-cocoon" id="61-philosophers-cocoon"><h3>6.1 Philosophers Cocoon</h3></a>
+<p><a href="http://philosopherscocoon.typepad.com/">Philosophers Cocoon Blog <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<blockquote>
+<p>A safe and supportive forum for early-career philosophers.</p>
+</blockquote>
+<hr />
+<a class="header" href="#7-media" id="7-media"><h2>7. Media</h2></a>
+<a class="header" href="#71-philsophy-bites" id="71-philsophy-bites"><h3>7.1 Philsophy Bites</h3></a>
+<p><a href="http://www.philosophybites.com">Philosophy Bites <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+Podcasts of top philosophers interviewed on bite-sized topics. Active for a long time and still so.</p>
+<a class="header" href="#72-the-philosophers-zone" id="72-the-philosophers-zone"><h3>7.2 The Philosopher's Zone</h3></a>
+<p><a href="http://www.abc.net.au/radionational/programs/philosopherszone/">www.abc.net: Philosopher's Zone <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<blockquote>
+<p>The simplest questions often have the most complex answers. The Philosopher's Zone is your guide through the strange thickets of logic, metaphysics and ethics.</p>
+</blockquote>
+<p>A resilient podcast with interviews of academic philosophers.</p>
+<a class="header" href="#73-open-culture" id="73-open-culture"><h3>7.3 Open Culture</h3></a>
+<p><a href="http://www.openculture.com/philosophy_free_courses">Free Online Philosophy Courses <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+A collection of videos, podcasts, articles and websites.</p>
+<a class="header" href="#74-courseworld" id="74-courseworld"><h3>7.4 Courseworld</h3></a>
+<p><a href="http://www.courseworld.org/home/view_category/1/55">Courseworld Philosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+This is a collection of videos covering various areas of philosophy. The entries are sorted by their area of interest.</p>
+<a class="header" href="#75-youtube-channels" id="75-youtube-channels"><h3>7.5 Youtube Channels</h3></a>
+<a class="header" href="#751-mark-thorsby---philosophical-techné" id="751-mark-thorsby---philosophical-techné"><h4>7.5.1 Mark Thorsby - Philosophical Techné</h4></a>
+<p>https://www.youtube.com/user/PhilosophicalTechne <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Various more detailed introductory courses to certain philosophical works, philosophers and disciplines mostly with accompanying prezi-presentations.</p>
+<a class="header" href="#752-carneades" id="752-carneades"><h4>7.5.2 Carneades</h4></a>
+<p>https://www.youtube.com/user/carneadesofcyrene <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Various introductory courses. From general introductions to certain philosophical disciplines to specific philosophers.</p>
+<a class="header" href="#753-gregory-b-sadler" id="753-gregory-b-sadler"><h4>7.5.3 Gregory B. Sadler</h4></a>
+<p>https://www.youtube.com/user/gbisadler <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p>I bring philosophy into practice, making complex classic philosophical ideas accessible for a wide audience of professionals, students, and life-long learners.</p>
+</blockquote>
+<a class="header" href="#754-wireless-philosophy" id="754-wireless-philosophy"><h4>7.5.4 Wireless Philosophy</h4></a>
+<p>https://www.youtube.com/user/WirelessPhilosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#755-philosophy-at-the-university-of-edinburgh" id="755-philosophy-at-the-university-of-edinburgh"><h4>7.5.5 Philosophy at the University of Edinburgh</h4></a>
+<p>https://www.youtube.com/user/edinburghphilosophy <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#756-philosophical-overdose" id="756-philosophical-overdose"><h4>7.5.6 Philosophical Overdose</h4></a>
+<p>https://www.youtube.com/user/soultorment27 <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<hr />
+<a class="header" href="#8-academia" id="8-academia"><h2>8. Academia</h2></a>
+<a class="header" href="#81-philevents" id="81-philevents"><h3>8.1 PhilEvents</h3></a>
+<p>http://philevents.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#82-philos-l" id="82-philos-l"><h3>8.2 PHILOS-L</h3></a>
+<p><a href="https://listserv.liv.ac.uk/cgi-bin/wa?A0=PHILOS-L">PHILOS-L <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a><br />
+European mailing list for academic philosophy. Also on facebook.</p>
+<a class="header" href="#83-philjobs" id="83-philjobs"><h3>8.3 PhilJobs</h3></a>
+<p>http://philjobs.org <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#84-conference-alerts" id="84-conference-alerts"><h3>8.4 Conference Alerts</h3></a>
+<p><a href="https://conferencealerts.com/topic-listing?topic=Philosophy">Philosophy Conferences Worldwide <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<a class="header" href="#85-polylog--interphil-mailing-list" id="85-polylog--interphil-mailing-list"><h3>8.5 Polylog | InterPhil Mailing List</h3></a>
+<p><a href="https://interphil.polylog.org/index-en.htm">InterPhil mailing list <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<blockquote>
+<p>InterPhil (Intercultural Philosophy News) is a moderated mailing list and provides a multilingual news board on events and further information from the fields of intercultural and comparative philosophy. This may include in individual cases news from interculturally oriented cultural, social, religious or historical sciences, as far as the information is of philosophical relevance.</p>
+</blockquote>
+<hr />
+<a class="header" href="#9-additional-helpful-resources" id="9-additional-helpful-resources"><h2>9. Additional Helpful Resources</h2></a>
+<a class="header" href="#91-squashed-philosophers" id="91-squashed-philosophers"><h3>9.1 Squashed Philosophers</h3></a>
+<p>http://sqapo.com/index.htm <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Provides what can be described as abstracts for a selection of classic philosophical works. Potentially helpful to get a first grasp on the material.</p>
+<a class="header" href="#92-the-philosophical-gourmet-report" id="92-the-philosophical-gourmet-report"><h3>9.2 The Philosophical Gourmet Report</h3></a>
+<blockquote>
+<p>A Ranking of Graduate Programs in Philosophy in the English-Speaking World</p>
+</blockquote>
+<p>http://www.philosophicalgourmet.com/default.asp <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#93-mactutor-history-of-mathematics-archive" id="93-mactutor-history-of-mathematics-archive"><h3>9.3 MacTutor History of Mathematics archive</h3></a>
+<p>http://www-history.mcs.st-andrews.ac.uk/index.html <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#94-fallacy-files" id="94-fallacy-files"><h3>9.4 Fallacy Files</h3></a>
+<blockquote>
+<p>A collection of named fallacies—such as &quot;ad hominem&quot;—that is, types of bad reasoning which someone has thought distinctive and interesting enough to name and describe. This collection took the form, primarily, of the study and acquisition of books and articles on the named fallacies, especially textbooks and reference books. You can find individual files on the named fallacies via the Taxonomy of Logical Fallacies, or from the alphabetical index in the scroll bar to your left.<br />
+A collection of fallacious, or otherwise bad, arguments, that is, examples of reasoning which may commit one or more of the named fallacies under 1, or are bad in some way yet to be classified. This collection took the form of clippings from newspapers, magazines, pamphlets, photocopies of pages of books, and—in a few rare cases—entire articles or books which were rich sources of bad reasoning. I have used selections from my collection as examples in many of the files on named fallacies, and additional examples can be found in the file: Stalking the Wild Fallacy.</p>
+</blockquote>
+<p>http://www.fallacyfiles.org/index.html <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#95-stephens-guide-to-logical-fallacies" id="95-stephens-guide-to-logical-fallacies"><h3>9.5 Stephen's Guide to Logical Fallacies</h3></a>
+<p>http://onegoodmove.org/fallacy/toc.htm <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#96-episteme-links" id="96-episteme-links"><h3>9.6 Episteme Links</h3></a>
+<p>http://www.epistemelinks.com <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Another collection of helpful links like <strong>philHub</strong>, sadly no longer updated.</p>
+<a class="header" href="#97-resource-list-of-the-university-of-regensburg-de" id="97-resource-list-of-the-university-of-regensburg-de"><h3>9.7 Resource list of the University of Regensburg (DE)</h3></a>
+<p><a href="http://dbis.uni-regensburg.de//dbliste.php?bib_id=ubhe&amp;colors=31&amp;ocolors=40&amp;lett=f&amp;gebiete=21">www.dbis.uni-regensburg.de <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></a></p>
+<hr />
+<a class="header" href="#10-philosophy-fun" id="10-philosophy-fun"><h2>10. Philosophy Fun</h2></a>
+<a class="header" href="#101-existential-comics" id="101-existential-comics"><h3>10.1 Existential Comics</h3></a>
+<p>http://existentialcomics.com/blog <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<a class="header" href="#102-philosophy-bro" id="102-philosophy-bro"><h3>10.2 Philosophy Bro</h3></a>
+<p>http://philosophybro.com/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font><br />
+Humorous breakdowns of philosophical concepts and philosophers key texts. Delivered to you by a <em>bro</em>.</p>
+<a class="header" href="#103-the-philosophical-lexicon" id="103-the-philosophical-lexicon"><h3>10.3 The Philosophical Lexicon</h3></a>
+<p>http://www.philosophicallexicon.com/ <font color="adadad"><i class="fa fa-external-link fa-fw" style="font-size:12px;"></i></font></p>
+<blockquote>
+<p><strong>frege</strong>, n. (only in the idiom, to beg the frege) To acknowledge the inconsistency of one's position but maintain it anyway.<br />
+<strong>kripkography</strong>, n. The opposite of cryptography: the art of translating a meaningless message (about, e.g., de re necessity) into expressions that an uninitiated observer would take to be straightforwardly meaningful (e.g., &quot;Look, it's not so hard. All he's saying is that since the term is a rigid designator, it refers to the same thing in all possible worlds&quot;). &quot;He used to claim he just 'couldn't understand' essentialism, but now, thanks to kripkography, he just sits there nodding and smiling.&quot;</p>
+</blockquote>
+<p>Apparently started by Dennett in 1969; obviously opinionated.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="do.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="tex.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="do.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="tex.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="hypothesis.js"></script>
+        
+
+        
+
+    </body>
+</html>

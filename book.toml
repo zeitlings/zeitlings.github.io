@@ -1,0 +1,9 @@
+[book]
+authors = ["zeitlings"]
+multilingual = false
+src = "src"
+title = "PhilHub"
+[output.html]
+theme = "src/theme"
+additional-css = ["custom.css"]
+additional-js = ["hypothesis.js"]
