@@ -143,9 +143,10 @@
                 <div id="content" class="content">
                     <main>
                         <a class="header" href="#latex-for-philosophers" id="latex-for-philosophers"><h1>LaTeX for Philosophers</h1></a>
+<script src="https://hypothes.is/embed.js" async></script>
 <div id="markdown-toc" style="font-size: 14px">
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 <p style="font-size:16px">Contents</p>
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 <ul>
 <li><a href="#latex-for-philosophers">LaTeX for Philosophers</a>
 <ul>
@@ -162,15 +163,22 @@
 <li><a href="#2-pandoc-and-markdown">2. Pandoc and Markdown</a></li>
 <li><a href="#3-latex-guides">3. LaTeX Guides</a>
 <ul>
-<li><a href="#31-latex-for-logicians">3.1 LaTex for Logicians</a></li>
-<li><a href="#32-prepare-your-thesis-with-latex">3.2 Prepare your Thesis with LaTeX</a></li>
+<li><a href="#31-latex-for-logicians">3.1. LaTex for Logicians</a></li>
+<li><a href="#32-prepare-your-thesis-with-latex">3.2. Prepare your Thesis with LaTeX</a></li>
+</ul>
+</li>
+<li><a href="#4-citations">4. Citations</a>
+<ul>
+<li><a href="#41-bibtex-and-biblatex">4.1. BibTeX and BibLaTeX</a></li>
+<li><a href="#42-citing-in-philosophy">4.2. Citing in Philosophy</a></li>
+</ul>
+</li>
+<li><a href="#4-reference-managers">4. Reference Managers</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</div>
 <!-- /TOC -->
+</div>  
 <p>It's best to acquaint yourself as early as possible with LaTeX, as it is the most reliable, most adjustable solution and simply most pleasing to the eyes way to write your papers or thesis. You can consider LaTeX the default standard of good practice. Nonetheless, journals still tend ask for word files these days. For an easy way to convert your file back, see what <em>Pandoc</em> can do for you.</p>
 <a class="header" href="#1-latex-fundamentals" id="1-latex-fundamentals"><h2>1. LaTeX fundamentals</h2></a>
 <a class="header" href="#11-install-latex" id="11-install-latex"><h3>1.1 Install LaTeX</h3></a>
@@ -193,16 +201,50 @@
 <a href="https://github.com/zeitlings/alfred-latex-md">https://github.com/zeitlings/alfred-latex-md</a> (LaTeX ⟷ Markdown Alfred Workflow)<br />
 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a> (Markdown Cheatsheet)</p>
 <a class="header" href="#3-latex-guides" id="3-latex-guides"><h2>3. LaTeX Guides</h2></a>
-<a class="header" href="#31-latex-for-logicians" id="31-latex-for-logicians"><h3>3.1 LaTex for Logicians</h3></a>
+<a class="header" href="#31-latex-for-logicians" id="31-latex-for-logicians"><h3>3.1. LaTex for Logicians</h3></a>
 <p><a href="http://www.logicmatters.net/latex-for-logicians/">http://www.logicmatters.net/latex-for-logicians/</a></p>
 <blockquote>
 <p>These pages give a brief guide to resources of interest to logicians, philosophers and others using LaTeX to produce papers or presentations, teaching materials, theses or books, and perhaps wanting to include logical matter such as natural deduction proofs.</p>
 </blockquote>
-<a class="header" href="#32-prepare-your-thesis-with-latex" id="32-prepare-your-thesis-with-latex"><h3>3.2 Prepare your Thesis with LaTeX</h3></a>
+<a class="header" href="#32-prepare-your-thesis-with-latex" id="32-prepare-your-thesis-with-latex"><h3>3.2. Prepare your Thesis with LaTeX</h3></a>
 <p><a href="http://www.koksvik.net/latex.php">http://www.koksvik.net/latex.php</a></p>
 <blockquote>
 <p>This page provides instructions for how to prepare your thesis with LaTeX. It also provides a number of template files which can be used to produce a thesis with relative ease. The page was last updated on 24 September 2012.</p>
 </blockquote>
+<a class="header" href="#4-citations" id="4-citations"><h2>4. Citations</h2></a>
+<a class="header" href="#41-bibtex-and-biblatex" id="41-bibtex-and-biblatex"><h3>4.1. BibTeX and BibLaTeX</h3></a>
+<p>Citing can be automated using <code>*.bib</code> files, i.e. a bibliography database.   General information and further references can be found on <a href="https://www.tug.org/bibtex/">TUG</a>. The standard package can be viewed on <a href="https://ctan.org/pkg/bibtex">CTAN.org</a>, e.g. for the extended documentation.</p>
+<p>Another, more sophisticated package for bibliographies is <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a>.</p>
+<p>A typical database entry looks akin to this:</p>
+<pre><code>@book{HUA17,
+    Author = {Husserl, Edmund},
+    Editor = {Janssen, Paul},
+    Title = {Formale und transzendentale Logik: Versuch einer Kritik der logischen Vernunft}, 
+    Series = {Husserliana: Gesammelte Werke},
+    Volume = {17}, 
+    Pages = {XLV, 510}, 
+    Address = {The Hague, Netherlands},
+    Publisher = {Martinus Nijhoff},
+    Year = {1974},
+    Shorttitle = {FTL}}
+</code></pre>
+<a class="header" href="#42-citing-in-philosophy" id="42-citing-in-philosophy"><h3>4.2. Citing in Philosophy</h3></a>
+<p><a href="https://www.ctan.org/pkg/biblatex-philosophy">BibLaTeX-Philosophy</a> provides citation styles you might need to fit your institutions requirements.</p>
+<blockquote>
+<p>The bun­dle of­fers two styles – phi­los­o­phy-clas­sic and phi­los­o­phy-mod­ern – that fa­cil­i­tate the pro­duc­tion of two dif­fer­ent kinds of bib­li­og­ra­phy, based on the au­tho­ryear style, with op­tions and fea­tures to man­age the in­for­ma­tion about the trans­la­tion of for­eign texts or their reprints.</p>
+</blockquote>
+<a class="header" href="#4-reference-managers" id="4-reference-managers"><h2>4. Reference Managers</h2></a>
+<p>Keeping all your references in one place is never a bad idea. Your institution probably provides a reference manager, as for instance EndNote. Decent open source options are</p>
+<ul>
+<li><a href="https://www.zotero.org/">Zotero</a> (Mac)</li>
+<li><a href="https://www.mendeley.com">Mendeley</a> (Cross-Platform <em>Freemium</em>)</li>
+<li><a href="http://www.qiqqa.com/">qiqqa</a> (Windows, Android)</li>
+</ul>
+<p>Some payed options are</p>
+<ul>
+<li><a href="https://www.sonnysoftware.com/">Bookends</a> (MacOS, iOS)</li>
+<li><a href="https://www.endnote.com/">EndNote</a> (Cross-Platform)</li>
+</ul>
 
                     </main>
 

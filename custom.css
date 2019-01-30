@@ -136,5 +136,16 @@ a.header:target h4:before {
 
   }
 
+.box {
+    background: #f9f9f9 !important;
+    flex-grow: 0;
+    height: 100%;
+    width: 100%;
+    margin-right: 0em;
+    margin-bottom: 1em;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+
 /* without effect */
 hr { margin: 10px 0 10px 0; }
