@@ -53,7 +53,7 @@ a.header:target h4:before {
 }
 
 #markdown-toc {
-    border: 1px solid #ededed;
+    /* border: 1px solid #ededed; */
     padding: 1.5em;
     list-style: decimal;
     display: inline-block;
@@ -78,7 +78,7 @@ a.header:target h4:before {
 .left {
   background: #f9f9f9;
   flex-grow: 1;
-  height: 150px;
+  height: 185px;
   width: 50%;
   margin-right: 1em;
   margin-bottom: 1em;
@@ -99,7 +99,7 @@ a.header:target h4:before {
 .right {
   background: #f9f9f9;
   flex-grow: 1;
-  height: 150px;
+  height: 185px;
   width: 50%;
   margin-right: 0em;
   margin-bottom: 1em;
@@ -110,7 +110,7 @@ a.header:target h4:before {
 .blindRight {
   background: #fff;
   flex-grow: 1;
-  height: 150px;
+  height: 185px;
   width: 50%;
   margin-right: 0em;
   margin-bottom: 1em;
@@ -124,9 +124,20 @@ a.header:target h4:before {
   color: none;
 }
 
+#flexText,
+#flexTextSmall {
+text-align: center;
+}
+
 #flexText {
-  padding: .8em;
-  padding-left: .8em;
+  padding-top: 2em;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#flexTextSmall {
+  padding-top: 1.2em;
+  font-size: 15px;
 }
 
 @media screen only and (max-width: 785px) {
