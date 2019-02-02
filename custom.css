@@ -55,19 +55,23 @@ a.header:target h4:before {
 #markdown-toc ul{
     /* list-style: decimal; */
     list-style-type: none !important;
+    margin:: 30px;
 
 }
 
 #markdown-toc {
     /* border: 1px solid #ededed; */
     border: none;
-    padding: 1.5em;
+    padding: 1em;
     /*list-style: decimal;*/
     display: inline-block;
-    margin:0;
+}
 
 
-/* ---------- */
+/*
+* ------------------------------
+*/
+
 
 
 .light {
