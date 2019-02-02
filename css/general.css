@@ -30,7 +30,7 @@ h4, h5 { margin-top: 2em; }
 
 .header + .header h3,
 .header + .header h4,
-.header + .header h5 { 
+.header + .header h5 {
     margin-top: 1em;
 }
 
@@ -39,7 +39,8 @@ a.header:target h2:before,
 a.header:target h3:before,
 a.header:target h4:before {
     display: inline-block;
-    content: "»";
+    content: "\f0c1";
+    font-family: FontAwesome;
     margin-left: -30px;
     width: 30px;
 }
@@ -106,6 +107,7 @@ blockquote {
     padding: 0 20px;
     color: var(--fg);
     background-color: var(--quote-bg);
+    border-left: .3em solid var(--quote-border) !important;
     border-top: .1em solid var(--quote-border);
     border-bottom: .1em solid var(--quote-border);
 }
@@ -141,4 +143,23 @@ blockquote {
 .tooltipped .tooltiptext {
     visibility: visible;
 }
-  
+
+
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+}
+
+
+// Using numbers instead of bullets for listing
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    list-style: decimal;
+    display: inline-block;
+}

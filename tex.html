@@ -145,7 +145,6 @@
                         <a class="header" href="#latex-for-philosophers" id="latex-for-philosophers"><h1>LaTeX for Philosophers</h1></a>
 <script src="https://hypothes.is/embed.js" async></script>
 <div id="markdown-toc" style="font-size: 14px">
-<p style="font-size:16px">Contents</p>
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 <ul>
 <li><a href="#latex-for-philosophers">LaTeX for Philosophers</a>
@@ -158,13 +157,18 @@
 <li><a href="#121-overleaf">1.2.1 Overleaf</a></li>
 </ul>
 </li>
+<li><a href="#13-a-list-of-useful-links">1.3 A List of Useful Links</a></li>
 </ul>
 </li>
 <li><a href="#2-pandoc-and-markdown">2. Pandoc and Markdown</a></li>
 <li><a href="#3-latex-guides">3. LaTeX Guides</a>
 <ul>
-<li><a href="#31-latex-for-logicians">3.1. LaTex for Logicians</a></li>
-<li><a href="#32-prepare-your-thesis-with-latex">3.2. Prepare your Thesis with LaTeX</a></li>
+<li><a href="#31-the-not-so-short-introduction-to-latex">3.1 The Not So Short Introduction to LaTeX</a></li>
+<li><a href="#32-getting-to-grips-with-latex">3.2 Getting to Grips with LaTeX</a></li>
+<li><a href="#33-wikibooks-latex">3.3 Wikibooks: LaTeX</a></li>
+<li><a href="#34-latex-for-logicians">3.4. LaTex for Logicians</a></li>
+<li><a href="#35-prepare-your-thesis-with-latex">3.5. Prepare your Thesis with LaTeX</a></li>
+<li><a href="#36-latex-templates-resources-and-guides">3.6 LaTeX Template's Resources and Guides</a></li>
 </ul>
 </li>
 <li><a href="#4-citations">4. Citations</a>
@@ -189,9 +193,56 @@
 <p>For <code>*.pdfs</code> to be compiled from your <code>*.tex</code> files it relies on several dependencies to be installed on your computer. They are provided by the <a href="http://www.tug.org/interest.html#free">Tex User Group (TUG)</a> for free. For example, Mac users can install <a href="https://www.tug.org/mactex/">MacTeX</a>. Windows and Linux users can install the dependencies with <a href="https://miktex.org/download">MiKTeX</a> or use <a href="https://www.tug.org/texlive/">TeX Live</a>. Check the TUG for alternatives. On <a href="https://www.latex-project.org/">https://www.latex-project.org/</a> you can find general information.</p>
 <a class="header" href="#12-editors" id="12-editors"><h3>1.2 Editors</h3></a>
 <p>You can find a list of free editors to write in on <a href="http://www.tug.org/interest.html#packages">www.tug.org</a>. Such include GitHubs open source editor <a href="https://atom.io/">Atom</a> or <a href="https://texstudio.org/">TeX Studio</a>. A list of commercial applications can be found <a href="http://www.tug.org/interest.html#vendors">here</a>. A rather user friendly and reasonably priced example is <a href="https://texpad.com/">Texpad</a> for mac. They also provide an iOS option for mobile editing. (I have no affiliation to them.)</p>
+<ul>
+<li><a href="https://www.overleaf.com?r=34b37c99&amp;rm=d&amp;rs=b">overleaf.com</a> (Free, Online)</li>
+<li><a href="https://atom.io/">atom.io</a> (Open Source)
+<ul>
+<li><a href="https://atom.io/packages/latex">atom LaTeX package</a></li>
+<li><a href="https://atom.io/packages/atom-latex">alternative LaTeX package</a></li>
+</ul>
+</li>
+<li><a href="https://www.lyx.org">LyX</a> (Open Source, <em>WYSIWYG</em>-style editor if you're into that)</li>
+<li><a href="http://www.xm1math.net/texmaker/">Texmaker</a> (Cross Platform, free)</li>
+<li><a href="http://texstudio.sourceforge.net/">TeXStudio</a> (Open Source)</li>
+<li><a href="https://www.tug.org/texworks/">TexWorks</a> (Open Source)</li>
+<li><a href="http://vim-latex.sourceforge.net/">Vim</a> (Open Source)</li>
+<li><a href="https://notepad-plus-plus.org/">Notepad++</a> (Windows, Open Source)</li>
+<li><a href="https://pages.uoregon.edu/koch/texshop/">TexShop</a> (Mac, Open Source)</li>
+</ul>
+<p>(See also <a href="https://en.wikipedia.org/wiki/Comparison_of_TeX_editors">Comparison of TeX Editors</a> @ Wikipedia)</p>
+<p>Some payed options are</p>
+<ul>
+<li><a href="https://www.texpad.com/">Texpad</a> (MacOS, iOS)</li>
+<li><a href="http://www.sublimetext.com/">Sublime Text</a> (Cross Platform)
+<ul>
+<li><a href="https://github.com/SublimeText/LaTeXTools#readme">LaTexTools Plugin</a></li>
+</ul>
+</li>
+</ul>
 <a class="header" href="#121-overleaf" id="121-overleaf"><h4>1.2.1 Overleaf</h4></a>
 <p>Overleaf deserves a special mention. It is an online, in-browser LaTeX-editor that makes your project accessible from anywhere, given that there is a wifi connection. They offer a free plan that should cover most of your needs. You can share your files with people to collaborate on your project directly in the browser window. However, it doesn't work well with mobile devices as of yet.
 <a href="https://www.overleaf.com?r=34b37c99&amp;rm=d&amp;rs=b">www.overleaf.com</a></p>
+<a class="header" href="#13-a-list-of-useful-links" id="13-a-list-of-useful-links"><h3>1.3 A List of Useful Links</h3></a>
+<ul>
+<li>
+<p><a href="http://www.tug.dk/FontCatalogue/">LaTeX Font Catalogue</a></p>
+</li>
+<li>
+<p><a href="http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-a4.pdf">The Comprehensive LaTeX Symbol List</a></p>
+</li>
+<li>
+<p><a href="http://detexify.kirelabs.org/classify.html">Detexify</a> (Draw the symbol you're looking for)</p>
+<blockquote>
+<p>Anyone who works with LaTeX knows how time-consuming it can be to find a symbol [...] Just draw the symbol you are looking for into the square area above [...]</p>
+</blockquote>
+</li>
+<li>
+<p><a href="http://www.nhn.ou.edu/%7Emorrison/LaTeX/CommonlyUsedFeatures.pdf">Commonly Used Features of LaTeX</a> (PDF)</p>
+</li>
+<li>
+<p><a href="http://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-a4.pdf">LaTeX Command Summary</a> (PDF)</p>
+</li>
+</ul>
 <a class="header" href="#2-pandoc-and-markdown" id="2-pandoc-and-markdown"><h2>2. Pandoc and Markdown</h2></a>
 <p>Sometimes you might want to write in Markdown and later integrate your output into your LaTeX file, e.g. when you're on the road. <a href="https://pandoc.org/">Pandoc</a> lets you convert different kinds of formatting into another. To use its full potential, this requires some fiddling with the command line. For a quick and simple way to specifically convert Markdown into LaTeX or vice versa you could try my <a href="https://github.com/zeitlings/alfred-latex-md">Alfred Workflow</a> to do just that.</p>
 <p>If you're still looking for a Markdown editor I'd recommend the charming cross platform, open source editor <a href="https://typora.io/"><strong>Typora</strong></a>. There are a lot of them out there and ultimately really any editor will do. <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Here's a Markdown Cheatsheet</a>.</p>
@@ -201,16 +252,37 @@
 <a href="https://github.com/zeitlings/alfred-latex-md">https://github.com/zeitlings/alfred-latex-md</a> (LaTeX ⟷ Markdown Alfred Workflow)<br />
 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a> (Markdown Cheatsheet)</p>
 <a class="header" href="#3-latex-guides" id="3-latex-guides"><h2>3. LaTeX Guides</h2></a>
-<a class="header" href="#31-latex-for-logicians" id="31-latex-for-logicians"><h3>3.1. LaTex for Logicians</h3></a>
+<a class="header" href="#31-the-not-so-short-introduction-to-latex" id="31-the-not-so-short-introduction-to-latex"><h3>3.1 The Not So Short Introduction to LaTeX</h3></a>
+<p>https://tobi.oetiker.ch/lshort/lshort.pdf</p>
+<p>A more detailed introductory  <code>.pdf</code> written by a certain Tobias Oetiker <em>et al.</em>.</p>
+<a class="header" href="#32-getting-to-grips-with-latex" id="32-getting-to-grips-with-latex"><h3>3.2 Getting to Grips with LaTeX</h3></a>
+<p><a href="https://www.andy-roberts.net/writing/latex">https://www.andy-roberts.net/writing/latex</a></p>
+<blockquote>
+<p>Here are some tutorials I have written for getting up to speed with this excellent document processing system. Funnily enough I wouldn't consider myself an expert, per se, but I'm learning all the time. I recall finding it quite taxing when I started to learn LaTeX, which is why I have started these tutorials. However, I hope that my experience plays to your advantage because I cover sort of questions and problems I had when I first learning LaTeX which are probably typical for most beginners.</p>
+<p>@ Andrew Roberts</p>
+</blockquote>
+<a class="header" href="#33-wikibooks-latex" id="33-wikibooks-latex"><h3>3.3 Wikibooks: LaTeX</h3></a>
+<p><a href="https://en.wikibooks.org/wiki/LaTeX">https://en.wikibooks.org/wiki/LaTeX</a></p>
+<blockquote>
+<p>This is a guide to the <strong>LaTeX</strong> <a href="https://en.wikipedia.org/wiki/Typesetting">typesetting</a> system. It is intended as a useful resource for everybody, from new users who wish to learn, to old hands who need a quick reference.</p>
+</blockquote>
+<a class="header" href="#34-latex-for-logicians" id="34-latex-for-logicians"><h3>3.4. LaTex for Logicians</h3></a>
 <p><a href="http://www.logicmatters.net/latex-for-logicians/">http://www.logicmatters.net/latex-for-logicians/</a></p>
 <blockquote>
 <p>These pages give a brief guide to resources of interest to logicians, philosophers and others using LaTeX to produce papers or presentations, teaching materials, theses or books, and perhaps wanting to include logical matter such as natural deduction proofs.</p>
 </blockquote>
-<a class="header" href="#32-prepare-your-thesis-with-latex" id="32-prepare-your-thesis-with-latex"><h3>3.2. Prepare your Thesis with LaTeX</h3></a>
+<a class="header" href="#35-prepare-your-thesis-with-latex" id="35-prepare-your-thesis-with-latex"><h3>3.5. Prepare your Thesis with LaTeX</h3></a>
 <p><a href="http://www.koksvik.net/latex.php">http://www.koksvik.net/latex.php</a></p>
 <blockquote>
 <p>This page provides instructions for how to prepare your thesis with LaTeX. It also provides a number of template files which can be used to produce a thesis with relative ease. The page was last updated on 24 September 2012.</p>
 </blockquote>
+<a class="header" href="#36-latex-templates-resources-and-guides" id="36-latex-templates-resources-and-guides"><h3>3.6 LaTeX Template's Resources and Guides</h3></a>
+<ul>
+<li><a href="https://www.latextemplates.com/latex-for-beginners">LaTeX for Beginners</a></li>
+<li><a href="https://www.latextemplates.com/">Free templates you might want to use</a></li>
+</ul>
+<!-- http://www.nhn.ou.edu/~morrison/LaTeX/LaTeXSummary.pdf Summary, math-oriented -->
+<!-- http://www.nhn.ou.edu/~morrison/LaTeX/epslatex.pdf include graphics -->
 <a class="header" href="#4-citations" id="4-citations"><h2>4. Citations</h2></a>
 <a class="header" href="#41-bibtex-and-biblatex" id="41-bibtex-and-biblatex"><h3>4.1. BibTeX and BibLaTeX</h3></a>
 <p>Citing can be automated using <code>*.bib</code> files, i.e. a bibliography database.   General information and further references can be found on <a href="https://www.tug.org/bibtex/">TUG</a>. The standard package can be viewed on <a href="https://ctan.org/pkg/bibtex">CTAN.org</a>, e.g. for the extended documentation.</p>

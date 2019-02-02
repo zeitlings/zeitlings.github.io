@@ -112,11 +112,11 @@
     --theme-popup-border: #cccccc;
     --theme-hover: #e6e6e6;
 
-    --quote-bg: hsl(197, 37%, 96%);
-    --quote-border: hsl(197, 37%, 91%);
+    --quote-bg: #f4f4f4;
+    --quote-border: #cecece;
 
     --table-border-color: hsl(0, 0%, 95%);
-    --table-header-bg: hsl(0, 0%, 80%);
+    --table-header-bg: #f4f4f4;
     --table-alternate-bg: hsl(0, 0%, 97%);
 
     --searchbar-border-color: #aaa;

@@ -39,25 +39,35 @@ a.header:target h4:before {
     width: 30px;
 }
 
+/*
+ *-------- TOC styling --------
+*/
 
-// Adding 'Contents' headline to the TOC
+/* Adding 'Contents' headline to the TOC */
 #markdown-toc::before {
     content: "Contents";
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 
-// Using numbers instead of bullets for listing
-#markdown-toc ul {
-    list-style: decimal;
+/* Using numbers instead of bullets for listing */
+#markdown-toc ul{
+    /* list-style: decimal; */
+    list-style-type: none !important;
+
 }
 
 #markdown-toc {
     /* border: 1px solid #ededed; */
+    border: none;
     padding: 1.5em;
-    list-style: decimal;
+    /*list-style: decimal;*/
     display: inline-block;
-}
+    margin:0;
+
+
+/* ---------- */
 
 
 .light {
